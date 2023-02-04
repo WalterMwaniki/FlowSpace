@@ -1,17 +1,13 @@
-import { IconDefinition } from "@fortawesome/fontawesome-svg-core";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import styles from '../styles/sidebar.module.scss';
 
-const SidebarItem = ({
-  title,
-  icon,
-}: {
-  title: string;
-  icon: IconDefinition;
-}) => {
+
+interface sidebarItem_props { label: string, icon: React.ReactNode };
+
+const SidebarItem = ({label, icon}: sidebarItem_props): JSX.Element => {
   return (
-    <div className="sidebarItem">
-      <FontAwesomeIcon icon={icon} />
-      <h2>{title}</h2>
+    <div className={styles.item}>
+      {icon}
+      <p>{label}</p>
     </div>
   );
 };

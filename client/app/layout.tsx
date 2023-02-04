@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../styles/globals.scss";
 import Sidebar from "./Sidebar";
 
 export default function RootLayout({
@@ -9,11 +9,11 @@ export default function RootLayout({
   return (
     <html>
       <head>
-        <title>🍅 PomoParty 🎉</title>
+        <title>FlowSpace</title>
       </head>
       <body className="app-container">
         <Sidebar />
-        <div>{children}</div>
+        <div className="container-children">{children}</div>
       </body>
     </html>
   );

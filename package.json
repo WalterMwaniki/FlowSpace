@@ -21,5 +21,8 @@
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "@svgr/webpack": "^6.5.1"
   }
 }

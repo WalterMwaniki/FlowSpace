@@ -1,0 +1,43 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #6750A4;
+  --secondary: #E7DAFB;
+  --tertiary: #F2F2F2;
+  --quaternary: #F7F7F7;
+  --quinary: #FFFFFF;
+  --senary: #000000;
+  --septenary: #FF0000;
+  --octonary: #00FF00;
+  --nonary: #0000FF;
+  --denary: #FF00FF;
+  --undenary: #00FFFF;
+  --duodenary: #FFFF00;
+
+  --bdrad: 15px;
+}
+
+
+
+
+.app-container {
+  height: 100vh;
+  display: grid;
+  grid-template: auto / minmax(180px, 13%) 6fr 3fr;
+
+  .container-children {
+    display: grid;
+    place-content: center;
+    text-align: center;
+  }
+}
