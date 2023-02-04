@@ -1,1 +1,1 @@
-# mp-games
+# Pomo-Party
