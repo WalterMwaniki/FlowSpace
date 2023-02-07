@@ -1,7 +1,7 @@
 .nav {
-  background-color: #e7dafb;
+  background-color: var(--md-sys-color-primary-container);
   padding: 0 0 20px 0;
-  border-radius: 0px var(--bdrad) var(--bdrad) 0px;
+  // border-radius: 0px var(--border-radius) var(--border-radius) 0px;
   height: 100%;
   display: grid;
   grid-template: 3fr auto 2fr / auto;
@@ -12,7 +12,7 @@
   font-weight: 300;
   font-size: 1.6em;
   letter-spacing: 0.1em;
-  color: #35106a;
+  color: var(--md-sys-color-primary);
 }
 
 .nav_items {
@@ -25,10 +25,10 @@
     gap: 25px;
     padding: 0 20px;
     align-items: center;
-    border-radius: 0px var(--bdrad) var(--bdrad) 0px;
+    border-radius: 0px var(--border-radius) var(--border-radius) 0px;
 
     svg {
-      fill: #6750a4;
+      fill: var(--md-sys-color-primary);
       width: 1.6em;
       stroke-linecap: round;
     }
@@ -36,20 +36,22 @@
     p {
       font-weight: 350;
       font-size: 1em;
-      color: #6750a4;
+      color: var(--md-sys-color-primary);
     }
 
     &:hover {
       transition: all 0.2s ease-in;
-      background-color: #35106a;
       cursor: pointer;
+      background-color: rgba(150, 150, 150, 0.2);
+    }
 
-      svg {
-        fill: #e7dafb;
-      }
-
+    &.active {
+      background-color: var(--md-sys-color-on-primary-container);
       p {
-        color: #e7dafb;
+        color: var(--md-sys-color-on-primary);
+      }
+      svg {
+        fill: var(--md-sys-color-on-primary);
       }
     }
   }
@@ -66,12 +68,12 @@
     gap: 20px;
     padding: 0 20px;
     align-items: center;
-    border-radius: 0px var(--bdrad) var(--bdrad) 0px;
+    border-radius: 0px var(--border-radius) var(--border-radius) 0px;
 
     p {
       font-weight: 400;
       font-size: 1.1em;
-      color: #6750a4;
+      color: var(--md-sys-color-primary);
     }
   }
 
@@ -80,8 +82,8 @@
     padding: 0 20px;
     font-weight: 350;
     font-size: 1.1em;
-    color: #e4dbf4;
-    background-color: #6d647a;
-    border-radius: 0px var(--bdrad) var(--bdrad) 0px;
+    color: var(--md-sys-color-primary-container);
+    background-color: var(--md-sys-color-secondary);
+    border-radius: 0px var(--border-radius) var(--border-radius) 0px;
   }
 }

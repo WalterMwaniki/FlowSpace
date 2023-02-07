@@ -1,8 +1,7 @@
-// import { ThemeProvider } from "next-themes";
-
 import "../styles/globals.scss";
-import "../styles/theme/_light-color.css";
+import "../styles/themes.scss";
 
+import { ServerThemeProvider } from "next-themes";
 import Sidebar from "../components/Sidebar";
 
 export default function RootLayout({
@@ -11,16 +10,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <title>FlowSpace</title>
-      </head>
-      <body className="app-container">
-        {/* <ThemeProvider defaultTheme="light" attribute="class"> */}
+    <ServerThemeProvider defaultTheme="light" attribute="data-theme">
+      <html lang="en">
+        <head>
+          <title>FlowSpace</title>
+        </head>
+        <body className="app-container">
           <Sidebar />
           <div className="container-children">{children}</div>
-        {/* </ThemeProvider> */}
-      </body>
-    </html>
+        </body>
+      </html>
+    </ServerThemeProvider>
   );
 }

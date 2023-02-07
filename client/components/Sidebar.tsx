@@ -1,4 +1,5 @@
 import SidebarItem from "./SidebarItem";
+import ThemeChanger from "./Themechanger";
 import {
   HomeIcon,
   SessionIcon,
@@ -17,40 +18,22 @@ const Sidebar = () => (
         <p>FlowSpace</p>
       </div>
       <div className={styles.nav_items}>
-        <SidebarItem
-          label="Home"
-          icon={<HomeIcon  />}
-        />
+        <SidebarItem label="Home" icon={<HomeIcon />} isSelected={true} />
         <SidebarItem
           label="Session"
           icon={<SessionIcon />}
+          isSelected={false}
         />
-        <SidebarItem
-          label="Games"
-          icon={<GamesIcon />}
-        />
-        <SidebarItem
-          label="Stats"
-          icon={<StatsIcon />}
-        />
+        <SidebarItem label="Games" icon={<GamesIcon />} isSelected={false} />
+        <SidebarItem label="Stats" icon={<StatsIcon />} isSelected={false} />
         <SidebarItem
           label="Settings"
           icon={<SettingsIcon />}
+          isSelected={false}
         />
       </div>
       <div className={styles.nav_footer}>
-        <div className={styles.theme}>
-        <button
-          className="theme-toggle"
-          id="theme-toggle"
-          title="Toggles light & dark"
-          aria-label="auto"
-          aria-live="polite"
-        >
-          <ThemeToggleIcon />
-          </button>
-          <p>Theme</p>
-        </div>
+        <ThemeChanger />
         <div className={styles.user}>
           <p>@Faraja</p>
         </div>

@@ -1,15 +1,31 @@
-import styles from '../styles/sidebar.module.scss';
+import styles from "../styles/sidebar.module.scss";
 
+interface sidebarItem_props {
+  label: string;
+  isSelected: boolean;
+  icon: React.ReactNode;
+}
 
-interface sidebarItem_props { label: string, icon: React.ReactNode };
-
-const SidebarItem = ({label, icon}: sidebarItem_props): JSX.Element => {
-  return (
-    <div className={styles.item}>
-      {icon}
-      <p>{label}</p>
-    </div>
-  );
+const SidebarItem = ({
+  label,
+  isSelected,
+  icon,
+}: sidebarItem_props): JSX.Element => {
+  if (isSelected) {
+    return (
+      <div className={`${styles.item} ${styles.active}`}>
+        {icon}
+        <p>{label}</p>
+      </div>
+    );
+  } else {
+    return (
+      <div className={styles.item}>
+        {icon}
+        <p>{label}</p>
+      </div>
+    );
+  }
 };
 
 export default SidebarItem;
