@@ -1,6 +1,5 @@
 
 
-
 .nav {
   background-color: #E7DAFB;
   padding: 0 0 20px 0;
@@ -53,6 +52,18 @@
   }
 /* on hover animate changes */
 
+  &.active {
+    background-color: #35106A;
+    cursor: pointer;
+
+    svg {
+      fill: #E7DAFB;
+    }
+
+    p {
+      color: #E7DAFB;
+    }
+  }
 }
 
 .user {
