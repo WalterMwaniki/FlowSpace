@@ -1,5 +1,4 @@
 import "../styles/globals.scss";
-import "../styles/themes.scss";
 
 import { ServerThemeProvider } from "next-themes";
 import Sidebar from "../components/Sidebar";
