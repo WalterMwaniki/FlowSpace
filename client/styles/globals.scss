@@ -1,3 +1,5 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
 html,
 body {
   padding: 0;
@@ -28,37 +30,20 @@ body {
   }
 }
 
-/*------ Style 1 ------*/
-.color-picker {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  width: 30px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.color-picker::-webkit-color-swatch {
-  border-radius: 5px;
-  border: none;
-}
-.color-picker::-moz-color-swatch {
-  border-radius: 5px;
-  border: none;
-}
-
-.theme_picker {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  align-items: center;
-}
-
 :root {
+  --light-mode-std: #fff;
   --my-hover-color: rgba(150, 150, 150, 0.2);
+  --md-sys-color-background: var(--light-mode-std);
+  --md-sys-color-primary: var(--light-mode-std);
+  --md-sys-color-primary-container: var(--light-mode-std);
+  --md-sys-color-secondary: var(--light-mode-std);
 }
 
 [data-theme="dark"] {
+  --dark-mode-std: #1e1e1e;
   --my-hover-color: rgba(192, 192, 192, 0.4);
+  --md-sys-color-background: var(--dark-mode-std);
+  --md-sys-color-primary: var(--dark-mode-std);
+  --md-sys-color-primary-container: var(--dark-mode-std);
+  --md-sys-color-secondary: var(--dark-mode-std);
 }

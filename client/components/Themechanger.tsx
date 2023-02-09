@@ -1,4 +1,11 @@
+/* Credit - GUI challenges
+ */
+
 "use client";
+
+import "../styles/themechanger.scss";
+
+import { ThemeToggleIcon } from "./icons";
 
 import { useState, useEffect, use } from "react";
 import { useTheme, ThemeProvider } from "next-themes";
@@ -60,9 +67,20 @@ export const ThemeChanger = (): JSX.Element => {
 
   return (
     <ThemeProvider enableSystem={true} attribute="data-theme">
-      <div className="theme_picker">
-        <button onClick={() => setTheme("light")}>Light</button>
-        <button onClick={() => setTheme("dark")}>Dark</button>
+      <div className="theme-picker">
+        <button
+          className="theme-toggle"
+          id="theme-toggle"
+          title="Toggles light & dark"
+          aria-label="auto"
+          aria-live="polite"
+          onClick={() => {
+            setTheme(theme === "dark" ? "light" : "dark");
+          }}
+        >
+          <ThemeToggleIcon />
+        </button>
+        <p>{theme}</p>
         <input
           className="color-picker"
           type="color"

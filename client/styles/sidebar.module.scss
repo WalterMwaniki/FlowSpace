@@ -63,20 +63,6 @@
   flex-direction: column;
   gap: 5px;
 
-  .theme {
-    display: flex;
-    gap: 20px;
-    padding: 0 20px;
-    align-items: center;
-    border-radius: 0px var(--border-radius) var(--border-radius) 0px;
-
-    p {
-      font-weight: 400;
-      font-size: 1.1em;
-      color: var(--md-sys-color-primary);
-    }
-  }
-
   .user {
     width: 100%;
     padding: 0 20px;
@@ -85,5 +71,11 @@
     color: var(--md-sys-color-primary-container);
     background-color: var(--md-sys-color-secondary);
     border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+  }
+}
+
+[data-theme="dark"] {
+  .nav {
+    background-color: var(--md-sys-color-secondary-container);
   }
 }

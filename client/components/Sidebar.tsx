@@ -18,19 +18,11 @@ const Sidebar = () => (
         <p>FlowSpace</p>
       </div>
       <div className={styles.nav_items}>
-        <SidebarItem label="Home" icon={<HomeIcon />} isSelected={true} />
-        <SidebarItem
-          label="Session"
-          icon={<SessionIcon />}
-          isSelected={false}
-        />
-        <SidebarItem label="Games" icon={<GamesIcon />} isSelected={false} />
-        <SidebarItem label="Stats" icon={<StatsIcon />} isSelected={false} />
-        <SidebarItem
-          label="Settings"
-          icon={<SettingsIcon />}
-          isSelected={false}
-        />
+        <SidebarItem label="Home" icon={<HomeIcon />} />
+        <SidebarItem label="Session" icon={<SessionIcon />} />
+        <SidebarItem label="Games" icon={<GamesIcon />} />
+        <SidebarItem label="Stats" icon={<StatsIcon />} />
+        <SidebarItem label="Settings" icon={<SettingsIcon />} />
       </div>
       <div className={styles.nav_footer}>
         <ThemeChanger />
