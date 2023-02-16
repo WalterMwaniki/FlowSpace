@@ -1,7 +1,10 @@
+"use client";
+import ThemeChanger from "../components/Themechanger";
+
 export default function page() {
   return (
     <div>
-      <a>Home</a>
+      <h1>Home</h1>
     </div>
   );
 }

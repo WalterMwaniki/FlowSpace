@@ -1,5 +1,7 @@
 import "../styles/globals.scss";
-import Sidebar from "./Sidebar";
+
+import { ServerThemeProvider } from "next-themes";
+import Sidebar from "../components/Sidebar";
 
 export default function RootLayout({
   children,
@@ -7,14 +9,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <head>
-        <title>FlowSpace</title>
-      </head>
-      <body className="app-container">
-        <Sidebar />
-        <div className="container-children">{children}</div>
-      </body>
-    </html>
+    <ServerThemeProvider defaultTheme="light" attribute="data-theme">
+      <html lang="en">
+        <head>
+          <title>FlowSpace</title>
+        </head>
+        <body className="app-container">
+          <Sidebar />
+          <div className="container-children">{children}</div>
+        </body>
+      </html>
+    </ServerThemeProvider>
   );
 }

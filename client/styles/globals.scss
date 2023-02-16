@@ -1,9 +1,11 @@
+@import "https://unpkg.com/open-props/easings.min.css";
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
 }
 
 * {
@@ -11,24 +13,8 @@ body {
 }
 
 :root {
-  --primary: #6750A4;
-  --secondary: #E7DAFB;
-  --tertiary: #F2F2F2;
-  --quaternary: #F7F7F7;
-  --quinary: #FFFFFF;
-  --senary: #000000;
-  --septenary: #FF0000;
-  --octonary: #00FF00;
-  --nonary: #0000FF;
-  --denary: #FF00FF;
-  --undenary: #00FFFF;
-  --duodenary: #FFFF00;
-
-  --bdrad: 15px;
+  --border-radius: 15px;
 }
-
-
-
 
 .app-container {
   height: 100vh;
@@ -39,5 +25,25 @@ body {
     display: grid;
     place-content: center;
     text-align: center;
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-primary);
   }
+}
+
+:root {
+  --light-mode-std: #fff;
+  --my-hover-color: rgba(150, 150, 150, 0.2);
+  --md-sys-color-background: var(--light-mode-std);
+  --md-sys-color-primary: var(--light-mode-std);
+  --md-sys-color-primary-container: var(--light-mode-std);
+  --md-sys-color-secondary: var(--light-mode-std);
+}
+
+[data-theme="dark"] {
+  --dark-mode-std: #1e1e1e;
+  --my-hover-color: rgba(192, 192, 192, 0.4);
+  --md-sys-color-background: var(--dark-mode-std);
+  --md-sys-color-primary: var(--dark-mode-std);
+  --md-sys-color-primary-container: var(--dark-mode-std);
+  --md-sys-color-secondary: var(--dark-mode-std);
 }

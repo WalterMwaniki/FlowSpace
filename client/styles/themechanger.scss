@@ -1,0 +1,118 @@
+.theme-picker {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+  align-items: center;
+  border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+
+  p {
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--md-sys-color-primary);
+  }
+}
+
+.color-picker {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.color-picker::-webkit-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
+.color-picker::-moz-color-swatch {
+  border-radius: 5px;
+  border: none;
+}
+
+// .theme_picker {
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 20px;
+//   align-items: center;
+// }
+
+.theme-toggle {
+  --size: 1.25rem;
+
+  background: none;
+  border: none;
+  padding: 0;
+
+  inline-size: var(--size);
+  block-size: var(--size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  outline-offset: 5px;
+
+  svg {
+    inline-size: 100%;
+    block-size: 100%;
+    stroke-linecap: round;
+  }
+
+  .sun-and-moon {
+    .moon,
+    .sun,
+    .sun-beams {
+      transform-origin: center center;
+    }
+    .moon,
+    .sun {
+      fill: var(--md-sys-color-primary);
+      transition: transform 0.5s var(--ease-elastic-3);
+    }
+    .sun-beams {
+      stroke: var(--md-sys-color-primary);
+      stroke-width: 2px;
+      transition: transform 0.5s var(--ease-elastic-4),
+        opacity 0.5s var(--ease-3);
+    }
+  }
+
+  &:hover {
+    .sun,
+    .moon {
+      fill: var(--md-sys-color-secondary);
+    }
+    .sun-beams {
+      stroke: var(--md-sys-color-secondary);
+    }
+  }
+
+  @media (hover: none) {
+    --size: 48px;
+  }
+}
+
+[data-theme="dark"] {
+  .sun-and-moon {
+    .sun {
+      transform: scale(1.75);
+      transition-timing-function: var(--ease-3);
+      transition-duration: 0.25s;
+    }
+    .sun-beams {
+      opacity: 0;
+      transition-duration: 0.15s;
+    }
+    .moon > circle {
+      transform: translateX(-7px);
+
+      @supports (cx: 1) {
+        transform: translateX(0);
+        cx: 17;
+      }
+    }
+  }
+}
