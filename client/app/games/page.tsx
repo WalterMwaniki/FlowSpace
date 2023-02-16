@@ -1,4 +1,3 @@
-import {Dice} from './dice';
 import { CollaborativeText } from './CollaborativeText';
 
 
