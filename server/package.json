@@ -1,7 +1,7 @@
 {
   "name": "mp-games",
   "version": "1.0.0",
-  "description": "Simple, Competitive, and Fun multiplayer games!",
+  "description": "Creating flow for humans!",
   "main": "server/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,21 +9,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gebrielmbelaineh/mp-games.git"
+    "url": "git+https://github.com/WalterMwaniki/FlowSpace.git"
+
   },
   "author": "Gebriel, Walter and Muhtasim",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gebrielmbelaineh/mp-games/issues"
+    "url": "https://github.com/WalterMwaniki/FlowSpace/issues"
   },
-  "homepage": "https://github.com/gebrielmbelaineh/mp-games#readme",
+  "homepage": "https://github.com/WalterMwaniki/FlowSpace#readme",
   "dependencies": {
-    "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "open-props": "^1.5.5"
-  },
-  "devDependencies": {
-    "@svgr/webpack": "^6.5.1"
   }
 }
